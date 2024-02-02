@@ -1,0 +1,53 @@
+.bgimglogin{
+    background-image: url(../../../public/images/bg2.jpg);
+    height: 100vh;
+}
+.loginbox{
+    background-color: #a5aab130;
+}
+         
+.btn-grad {
+    /* background-image: linear-gradient(to right, #FF4E50 0%, #F9D423  51%, #FF4E50  100%); */
+    background-image: linear-gradient(to right, rgba(9,9,121,1) 0%, rgba(0,212,255,1)  51%, rgb(20, 20, 91) 100%);
+
+    /* margin: 10px; */
+    padding: 5px 45px;
+    text-decoration: none;
+    text-align: center;
+    /* text-transform: uppercase; */
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    /* transition-duration: 10000ms; */
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  .loginhead{
+    font-size: 3.1rem;
+    /* background: #F9D423;
+    background: radial-gradient(circle farthest-side at center center, #F9D423 32%, #FF4E50 64%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    /* background: rgb(36, 36, 205);
+    background: radial-gradient(circle farthest-side at center center,rgba(0,212,255,1) 11%,rgb(7, 76, 129) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    
+    background: rgb(36, 36, 205);
+    background: radial-gradient(circle farthest-side at center center, rgba(0, 212, 255, 1) 11%, rgb(7, 76, 129) 90%);
+    background-clip: text;
+    color: transparent;
+  }
+ 
+
+.dv{
+  display: flex;
+  justify-content: center;
+}

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import Hrrresponsivenav from "./Hrresponsivenav";
-import { Container, Row, Col, Image ,Button} from "react-bootstrap";
 
 function Jobapply() {
     const [datatomap, setDatatomap] = useState([])
     const applications = async () => {
         try {
             // console.log("hr home");
-            const response = await fetch('/allapplications', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/allapplications', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

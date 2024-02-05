@@ -1,8 +1,8 @@
-import React, { useEffect,useState } from 'react'
-import { Container,Col,Row,Image,Card,Form } from 'react-bootstrap';
-import { Link ,useNavigate} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Form, Image, Row } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 
-import './userstyle.css'
+import './userstyle.css';
 function HrHome() {
     const [postdata,setPost]=useState([]);
     const [userdata,setUserData]=useState({});
@@ -10,7 +10,7 @@ function HrHome() {
     const navigate=useNavigate()
     const logout=async ()=>{
         try {
-            const response = await fetch('/logout', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/logout', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ function HrHome() {
     async function postDatafetch() {
       try {
           console.log("my home");
-      const response = await fetch('/jobpostdata', {
+      const response = await fetch('https://jobportal-xldf.onrender.com/jobpostdata', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ function HrHome() {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const response = await fetch('/searchfor', {
+          const response = await fetch('https://jobportal-xldf.onrender.com/searchfor', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ function HrHome() {
       const mypost = async (e) => {
         e.preventDefault();
         try {
-          const response = await fetch('/mypost', {
+          const response = await fetch('https://jobportal-xldf.onrender.com/mypost', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ function HrHome() {
     useEffect(() => {
         async function fetchData() {
             try {
-            const response = await fetch('/hrhomedata', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/hrhomedata', {
                 method: 'GET',
                 headers: {
                   'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ function HrHome() {
         async function postDatafetch() {
             try {
                 console.log("my home");
-            const response = await fetch('/jobpostdata', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/jobpostdata', {
                 method: 'GET',
                 headers: {
                   'Content-Type': 'application/json',

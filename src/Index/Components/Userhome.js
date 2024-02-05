@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { Container, Col, Row, Image, Button, Form, Card } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Form, Image, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import './userstyle.css'
+import './userstyle.css';
 function Userhome() {
     const [userdata, setUserData] = useState({});
     const [postdata, setPost] = useState([]);
@@ -16,7 +15,7 @@ function Userhome() {
 
     const logout = async () => {
         try {
-            const response = await fetch('/logout', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/logout', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -39,7 +38,7 @@ function Userhome() {
     async function postDatafetch() {
         try {
             console.log("my home");
-            const response = await fetch('/jobpostdata', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/jobpostdata', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -67,7 +66,7 @@ function Userhome() {
         // console.log(search)
         e.preventDefault();
         try {
-            const response = await fetch('/searchfor', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/searchfor', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -93,7 +92,7 @@ function Userhome() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('/searchfor', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/searchfor', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -115,7 +114,7 @@ function Userhome() {
  async function checksession() {
             try {
                 console.log("my home");
-                const response = await fetch('/checksession', {
+                const response = await fetch('https://jobportal-xldf.onrender.com/checksession', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -135,7 +134,7 @@ function Userhome() {
         async function fetchData() {
             try {
                 console.log("my home");
-                const response = await fetch('/userhomedata', {
+                const response = await fetch('https://jobportal-xldf.onrender.com/userhomedata', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -185,7 +184,7 @@ async function  apply(postid){
         if (result.isConfirmed) {
 
 
-            const response = await fetch('/apply', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/apply', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -226,7 +225,7 @@ async function  apply(postid){
     
     // console.log(postid);
     // try {
-    //     const response = await fetch('/apply', {
+    //     const response = await fetch('https://jobportal-xldf.onrender.com/apply', {
     //         method: 'POST',
     //         headers: {
     //             'Content-Type': 'application/json',

@@ -1,12 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import ReactCrop, {
-  centerCrop,
-  makeAspectCrop,
-  convertToPixelCrop,
+    centerCrop,
+    convertToPixelCrop,
+    makeAspectCrop,
 } from 'react-image-crop';
+import 'react-image-crop/dist/ReactCrop.css';
 import { canvasPreview } from './canvasPreview';
 import { useDebounceEffect } from './useDebounceEffect';
-import 'react-image-crop/dist/ReactCrop.css';
 
 function centerAspectCrop(mediaWidth, mediaHeight, aspect) {
   return centerCrop(
@@ -387,7 +387,7 @@ style={{ maxWidth: "100%", height: "auto" }}
 //       formData.append('photo', post.photo);
 //       const currentDate = new Date();
 //       formData.append('time', currentDate.toISOString());
-//       const response = await fetch('/addpost', {
+//       const response = await fetch('https://jobportal-xldf.onrender.com/addpost', {
 //         method: 'POST',
 //         body: formData,
 //       });

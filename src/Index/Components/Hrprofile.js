@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Form, Button, Card, Image, Modal } from "react-bootstrap";
+import { Card, Col, Container, Form, Image, Modal, Row } from "react-bootstrap";
+import Swal from 'sweetalert2';
 import Hrrresponsivenav from "./Hrresponsivenav";
-import Swal from 'sweetalert2'
 function Hrpofile() {
   const [userData, setUserData] = useState({
     name: '', about: '', company: '', contact: '', profile: '',
@@ -26,7 +26,7 @@ function Hrpofile() {
     async function fetchData() {
       try {
         
-        const response = await fetch('/hrhomedata', {
+        const response = await fetch('https://jobportal-xldf.onrender.com/hrhomedata', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ function Hrpofile() {
       updateData.append('photos', userData.cover);
       updateData.append('photos', userData.profile);
       // console.log(updateData);
-      const response = await fetch('/updatehrreg', {
+      const response = await fetch('https://jobportal-xldf.onrender.com/updatehrreg', {
         method: 'POST',
         body: updateData,
       });

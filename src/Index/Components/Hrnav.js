@@ -25,9 +25,8 @@
   
 //   export default Hrnav;
   
-import React,{useState} from 'react'
-import {Navbar,Nav,Container} from 'react-bootstrap'
-import { Link,useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./nav.css";
 
 function Usernav() {
@@ -35,7 +34,7 @@ function Usernav() {
   const navigate=useNavigate()
   const logout=async ()=>{
 	  try {
-		  const response = await fetch('/logout', {
+		  const response = await fetch('https://jobportal-xldf.onrender.com/logout', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json',

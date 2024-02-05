@@ -1,5 +1,5 @@
-import React,{ useState } from "react";
-import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Hrreg() {
@@ -24,7 +24,7 @@ function Hrreg() {
     e.preventDefault();
     console.log(userData);
     try {
-      const response = await fetch('/hrreg', {
+      const response = await fetch('https://jobportal-xldf.onrender.com/hrreg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

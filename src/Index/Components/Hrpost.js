@@ -40,7 +40,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await fetch('/addpost', {
+//       const response = await fetch('https://jobportal-xldf.onrender.com/addpost', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -365,7 +365,7 @@
 //       formData.append('photo', post.photo);
 //       const currentDate = new Date();
 //       formData.append('time', currentDate.toISOString());
-//       const response = await fetch('/addpost', {
+//       const response = await fetch('https://jobportal-xldf.onrender.com/addpost', {
 //         method: 'POST',
 //         body: formData,
 //       });
@@ -541,10 +541,10 @@
 // export default Hrpost;
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
 import ReactCrop, { makeAspectCrop } from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import Hrrresponsivenav from './Hrresponsivenav';
 
 const Hrpost = () => {
@@ -690,7 +690,7 @@ const Hrpost = () => {
 
 
     try {
-      const response = await fetch('/addpost', {
+      const response = await fetch('https://jobportal-xldf.onrender.com/addpost', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

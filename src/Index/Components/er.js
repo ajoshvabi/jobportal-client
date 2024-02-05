@@ -113,10 +113,10 @@ const onCropComplete = (crop) => {
 
   // working code 30/10
 
-  import React, { useState, useEffect } from 'react';
-import ReactCrop, { makeAspectCrop } from 'react-image-crop';
+  import React, { useEffect } from 'react';
+import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
+import { makeAspectCrop } from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 
 const Hrpost = () => {
   const [post, setPost] = useState({
@@ -225,7 +225,7 @@ const Hrpost = () => {
       formData.append('photo', post.photo);
       const currentDate = new Date();
       formData.append('time', currentDate.toISOString());
-      const response = await fetch('/addpost', {
+      const response = await fetch('https://jobportal-xldf.onrender.com/addpost', {
         method: 'POST',
         body: formData,
       });

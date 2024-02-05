@@ -21,7 +21,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await fetch('/userreg', {
+//       const response = await fetch('https://jobportal-xldf.onrender.com/userreg', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -174,10 +174,10 @@
 
 
 import React from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { useForm,reset } from "react-hook-form";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Userreg() {
@@ -185,7 +185,7 @@ function Userreg() {
 
   const onSubmit1 = async (data) => {
     try {
-      const response = await fetch('/userreg', {
+      const response = await fetch('https://jobportal-xldf.onrender.com/userreg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

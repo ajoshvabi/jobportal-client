@@ -1,8 +1,8 @@
-import React,{useEffect,useState} from "react";
-import { Container,Row,Col,Form,Button,Card,Image,Modal } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Card, Col, Container, Form, Image, Modal, Row } from "react-bootstrap";
+import Swal from 'sweetalert2';
 import Userresponsivenav from "./Userresponsivenav";
-import './userstyle.css'
-import Swal from 'sweetalert2'
+import './userstyle.css';
 
 function Profile(){
   const [userdata,setUserData]=useState({});
@@ -41,7 +41,7 @@ function Profile(){
       updateData.append('photos', userdata.profile);
       updateData.append('photos', userdata.cv);
       console.log(updateData);
-      const response = await fetch('/updateuserreg', {
+      const response = await fetch('https://jobportal-xldf.onrender.com/updateuserreg', {
         method: 'POST',
         body: updateData,
       });
@@ -59,7 +59,7 @@ function Profile(){
   async function fetchAppication() {
     try {
         console.log("my home");
-    const response = await fetch('/fetchAppication', {
+    const response = await fetch('https://jobportal-xldf.onrender.com/fetchAppication', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ function view(index){
     async function fetchData() {
         try {
             // console.log("my home");
-        const response = await fetch('/userhomedata', {
+        const response = await fetch('https://jobportal-xldf.onrender.com/userhomedata', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',

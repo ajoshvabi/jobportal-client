@@ -5,7 +5,7 @@ function Userresponsivenav(){
     const navigate=useNavigate()
     const logout=async ()=>{
         try {
-            const response = await fetch('/logout', {
+            const response = await fetch('https://jobportal-xldf.onrender.com/logout', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
